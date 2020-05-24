@@ -14,6 +14,21 @@
 #include <lualib.h>
 
 /**
+ * @brief conn, err = client.connect(url)
+ */
+LUALIB_API int luatc_connect(lua_State *L);
+
+/**
+ * @brief data, err = client.read(conn)
+ */
+LUALIB_API int luatc_read(lua_State *L);
+
+/**
+ * @brief err = client.write(conn, data)
+ */
+LUALIB_API int luatc_write(lua_State *L);
+
+/**
  * @brief result, err = client.poll(task)
  *
  * luatc_poll is the function that serves the client.poll on
